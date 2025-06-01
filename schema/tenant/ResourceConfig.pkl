@@ -1,0 +1,28 @@
+@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/resource" }
+module kubecon.demo.tenant.ResourceConfig
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
+import ".../util/Util.pkl"
+import "SelectorConfig.pkl"
+
+@Util.Nullable
+kubernetes: Kubernetes
+
+@Util.Nullable
+buckets: Listing<Bucket>(isDistinctBy((it) -> it.name))
+
+class Kubernetes {
+  /// namespaces defines the Kubernetes namespaces to be created.
+  @Util.Nullable
+  namespaces: Listing<String>(isDistinct)
+  @Util.Nullable
+  selector: Listing<SelectorConfig.Requirment>
+}
+
+class Bucket {
+  name: String
+  @Util.Nullable
+  ttl: String(matches(Regex(#"^\d+(d)$"#)))?
+  @Util.Nullable
+  selector: Listing<SelectorConfig.Requirment>
+}
