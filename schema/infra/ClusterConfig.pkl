@@ -1,0 +1,22 @@
+@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/infra/cluster" }
+module kubecon.demo.infra.ClusterConfig
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
+
+import "NodePoolConfig.pkl"
+
+/// clusters define a list of desired Clusters.
+clusters: Listing<Cluster>(isDistinctBy((it) -> it.name))
+
+/// Cluster describe the spec of a desired Cluster.
+class Cluster {
+  name: String
+
+  /// k8sVersion describes the desired Kubernetes version of the cluster(s).
+  k8sVersion: String(matches(Regex(#"^\d+\.\d+$"#)))
+
+  /// nodePools defines a list of NodePools.
+  /// Each NodePool derives the spec from pre-configured node templates, and optinally
+  /// customize the spec.
+  nodePools: Listing<NodePoolConfig.NodePoolSpec>(length > 0)
+}

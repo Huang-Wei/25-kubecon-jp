@@ -1,0 +1,11 @@
+@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/util" }
+module kubecon.demo.Util
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
+
+class Nullable extends go.Field {
+  structTags {
+    ["json"] = "%{name},omitempty"
+    ["yaml"] = "%{name},omitempty"
+  }
+}
