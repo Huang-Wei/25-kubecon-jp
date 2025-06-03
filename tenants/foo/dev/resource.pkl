@@ -19,14 +19,16 @@ kubernetes = new ResourceConfig.Kubernetes {
   selector = module.selector
 }
 
-buckets = new ResourceConfig.Bucket {
-  name = "foo-bucket-"
-  selector = (module.selector) {
-    new {
-      key = "cloud_provider"
-      operator = "In"
-      values {
-        "gcp"
+buckets = new Listing<ResourceConfig.Bucket> {
+  new {
+    name = "foo-bucket-"
+    selector = (module.selector) {
+      new {
+        key = "cloud_provider"
+        operator = "In"
+        values {
+          "gcp"
+        }
       }
     }
   }

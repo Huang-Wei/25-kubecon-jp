@@ -18,7 +18,9 @@ kubernetes = new ResourceConfig.Kubernetes {
   selector = module.selector
 }
 
-buckets = new ResourceConfig.Bucket {
-  name = "bar-bucket-"
-  selector = module.selector
+buckets = new Listing<ResourceConfig.Bucket> {
+  new {
+    name = "bar-bucket-"
+    selector = module.selector
+  }
 }
