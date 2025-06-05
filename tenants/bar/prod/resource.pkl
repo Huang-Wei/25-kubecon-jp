@@ -20,7 +20,7 @@ kubernetes = new ResourceConfig.Kubernetes {
 
 buckets = new Listing<ResourceConfig.Bucket> {
   new {
-    name = "bar-bucket-"
-    selector = module.selector
+    name = "bar"
+    region = "us-east-1"
   }
 }

@@ -21,13 +21,14 @@ kubernetes = new ResourceConfig.Kubernetes {
 
 buckets = new Listing<ResourceConfig.Bucket> {
   new {
-    name = "foo-bucket-"
+    name = "foo"
+    region = "us-west-2"
     selector = (module.selector) {
       new {
-        key = "cloud_provider"
+        key = "cloudProvider"
         operator = "In"
         values {
-          "gcp"
+          "aws"
         }
       }
     }

@@ -1,0 +1,20 @@
+import ".../schema/infra/AccountConfig.pkl"
+
+accounts = new Listing<AccountConfig.Account> {
+  new {
+    accountID = "644604562971"
+    cloudProvider = "aws"
+    tags {
+      // It's a prod account.
+      ["env"] = "prod"
+    }
+  }
+  new {
+    accountID = "lustrous-baton-460122-u7"
+    cloudProvider = "gcp"
+    tags {
+      // It's a dev account.
+      ["env"] = "dev"
+    }
+  }
+}
