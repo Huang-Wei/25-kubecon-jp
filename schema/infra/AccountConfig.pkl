@@ -1,0 +1,21 @@
+@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/infra/account" }
+module kubecon.demo.infra.AccountConfig
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
+
+/// accounts defines a list of Cloud accounts.
+accounts: Listing<Account>
+
+class Account {
+  /// account_id specifies the account id that manages the Cluster(s). It varies upon 'provider':
+  /// - aws: a 12-digit number.
+  /// - gcp: a random string that's also known as "project name".
+  accountID: String
+  /// cloudProvider specfies the cloud provider name.
+  cloudProvider: "aws" | "gcp"
+  /// tags is a map used to match Resource's selector.
+  tags: Mapping<String, String> = new {
+    // make a sane-default {"cloudProvider": cloudProvider} to save user's input.
+    ["cloudProvider"] = cloudProvider
+  }
+}

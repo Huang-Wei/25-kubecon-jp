@@ -3,7 +3,7 @@ module kubecon.demo.tenant.SelectorConfig
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
 
-typealias Key = "env" | "geo" | "cluster_type" | "cloud_provider"
+typealias Key = "env" | "geo" | "clusterType" | "cloudProvider"
 typealias Operator = "In" | "NotIn" | "Exists" | "DoesNotExist"
 
 selector: Listing<Requirment>
