@@ -11,8 +11,8 @@ type Key string
 const (
 	Env           Key = "env"
 	Geo           Key = "geo"
-	ClusterType   Key = "cluster_type"
-	CloudProvider Key = "cloud_provider"
+	ClusterType   Key = "clusterType"
+	CloudProvider Key = "cloudProvider"
 )
 
 // String returns the string representation of Key
@@ -29,9 +29,9 @@ func (rcv *Key) UnmarshalBinary(data []byte) error {
 		*rcv = Env
 	case "geo":
 		*rcv = Geo
-	case "cluster_type":
+	case "clusterType":
 		*rcv = ClusterType
-	case "cloud_provider":
+	case "cloudProvider":
 		*rcv = CloudProvider
 	default:
 		return fmt.Errorf(`illegal: "%s" is not a valid Key`, str)
