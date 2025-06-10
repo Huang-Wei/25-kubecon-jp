@@ -4,10 +4,6 @@ accounts = new Listing<AccountConfig.Account> {
   new {
     accountID = "644604562971"
     cloudProvider = "aws"
-    tags {
-      // It's a prod account.
-      ["env"] = "prod"
-    }
   }
   new {
     accountID = "lustrous-baton-460122-u7"
