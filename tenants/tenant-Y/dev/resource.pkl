@@ -1,29 +1,17 @@
 import ".../schema/tenant/ResourceConfig.pkl"
-import ".../schema/tenant/SelectorConfig.pkl"
-
-hidden selector = new Listing<SelectorConfig.Requirment> {
-  new {
-    key = "env"
-    operator = "In"
-    values {
-      "dev"
-    }
-  }
-}
 
 kubernetes = new ResourceConfig.Kubernetes {
   namespaces = new {
-    "foo1"
-    "foo2"
+    "y1"
+    "y2"
   }
-  selector = module.selector
 }
 
 buckets = new Listing<ResourceConfig.Bucket> {
   new {
-    name = "foo"
+    name = "y-temp"
     region = "us-west-2"
-    selector = (module.selector) {
+    selector {
       new {
         key = "cloudProvider"
         operator = "In"
