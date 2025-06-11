@@ -8,9 +8,5 @@ accounts = new Listing<AccountConfig.Account> {
   new {
     accountID = "lustrous-baton-460122-u7"
     cloudProvider = "gcp"
-    tags {
-      // It's a dev account.
-      ["env"] = "dev"
-    }
   }
 }
