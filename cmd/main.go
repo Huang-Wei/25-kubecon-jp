@@ -8,8 +8,12 @@ import (
 	"github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/resource"
 )
 
+// Note: this is just for demoing purpose, not a traditional main program.
 func main() {
-	pkls := []string{"tenants/bar/prod/resource.pkl", "tenants/foo/dev/resource.pkl"}
+	pkls := []string{
+		"tenants/tenant-x/prod/resource.pkl",
+		"tenants/tenant-y/dev/resource.pkl",
+	}
 
 	for _, pkl := range pkls {
 		fmt.Printf("===%s===\n", pkl)

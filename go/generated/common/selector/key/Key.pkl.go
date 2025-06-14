@@ -1,4 +1,4 @@
-// Code generated from Pkl module `kubecon.demo.tenant.SelectorConfig`. DO NOT EDIT.
+// Code generated from Pkl module `kubecon.demo.common.SelectorConfig`. DO NOT EDIT.
 package key
 
 import (
