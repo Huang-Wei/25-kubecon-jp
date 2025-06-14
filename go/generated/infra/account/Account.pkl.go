@@ -1,7 +1,7 @@
 // Code generated from Pkl module `kubecon.demo.infra.AccountConfig`. DO NOT EDIT.
 package account
 
-import "github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/selector/key"
+import "github.com/Huang-Wei/25-kubecon-jp/go/generated/common/selector/key"
 
 type Account struct {
 	// account_id specifies the account id that manages the Cluster(s). It varies upon 'provider':

@@ -1,9 +1,9 @@
-// Code generated from Pkl module `kubecon.demo.tenant.SelectorConfig`. DO NOT EDIT.
+// Code generated from Pkl module `kubecon.demo.common.SelectorConfig`. DO NOT EDIT.
 package selector
 
 import (
-	"github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/selector/key"
-	"github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/selector/operator"
+	"github.com/Huang-Wei/25-kubecon-jp/go/generated/common/selector/key"
+	"github.com/Huang-Wei/25-kubecon-jp/go/generated/common/selector/operator"
 )
 
 type Requirment struct {
