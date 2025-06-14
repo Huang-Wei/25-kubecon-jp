@@ -2,6 +2,7 @@
 module kubecon.demo.infra.AccountConfig
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
+import ".../common/SelectorConfig.pkl"
 
 /// accounts defines a list of Cloud accounts.
 accounts: Listing<Account>
@@ -14,7 +15,7 @@ class Account {
   /// cloudProvider specfies the cloud provider name.
   cloudProvider: "aws" | "gcp"
   /// tags is a map used to match Resource's selector.
-  tags: Mapping<String, String> = new {
+  tags: Mapping<SelectorConfig.Key, String> = new {
     // make a sane-default {"cloudProvider": cloudProvider} to save user's input.
     ["cloudProvider"] = cloudProvider
   }

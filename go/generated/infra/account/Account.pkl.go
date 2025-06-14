@@ -1,6 +1,8 @@
 // Code generated from Pkl module `kubecon.demo.infra.AccountConfig`. DO NOT EDIT.
 package account
 
+import "github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/selector/key"
+
 type Account struct {
 	// account_id specifies the account id that manages the Cluster(s). It varies upon 'provider':
 	// - aws: a 12-digit number.
@@ -11,5 +13,5 @@ type Account struct {
 	CloudProvider string `pkl:"cloudProvider"`
 
 	// tags is a map used to match Resource's selector.
-	Tags map[string]string `pkl:"tags"`
+	Tags map[key.Key]string `pkl:"tags"`
 }
