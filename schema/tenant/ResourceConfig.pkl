@@ -3,7 +3,7 @@ module kubecon.demo.tenant.ResourceConfig
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
 import ".../common/Util.pkl"
-import "SelectorConfig.pkl"
+import ".../common/SelectorConfig.pkl"
 
 @Util.Nullable
 kubernetes: Kubernetes
