@@ -1,5 +1,5 @@
-@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/util" }
-module kubecon.demo.Util
+@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/common/util" }
+module kubecon.demo.common.UtilConfig
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
 

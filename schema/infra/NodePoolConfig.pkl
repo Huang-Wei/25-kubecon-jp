@@ -3,7 +3,7 @@ module kubecon.demo.infra.NodePoolConfig
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
 
-import ".../schema/common/Util.pkl"
+import ".../schema/common/UtilConfig.pkl" as uc
 
 /// nodepoolTemplates is a map keyed with a nodepool template name, and valued with the spec of desired NodePool.
 nodepoolTemplates: Mapping<String, NodePoolSpec>
@@ -13,14 +13,14 @@ class NodePoolSpec {
   /// "<name>=true:NoSchedule". Defaults to true.
   tainted: Boolean = true
   /// min_size defines the minimum size of the NodePool.
-  @Util.Nullable
+  @uc.Nullable
   minSize: Int(this >= 0)?
   /// max_size defines the minimum size of the NodePool.
-  @Util.Nullable
+  @uc.Nullable
   maxSize: Int(this >= 0)?
   /// instanceTypes specfies the types of instances that can be used in this Nodepool.
   instanceTypes: Listing<String>(length > 0)
   /// tags defines a seires of key:value pairs for the NodePool.
-  @Util.Nullable
+  @uc.Nullable
   tags: Mapping<String, String>
 }

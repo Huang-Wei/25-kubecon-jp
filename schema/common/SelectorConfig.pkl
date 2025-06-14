@@ -1,5 +1,5 @@
-@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/tenant/selector" }
-module kubecon.demo.tenant.SelectorConfig
+@go.Package { name = "github.com/Huang-Wei/25-kubecon-jp/go/generated/common/selector" }
+module kubecon.demo.common.SelectorConfig
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.10.0#/go.pkl"
 
