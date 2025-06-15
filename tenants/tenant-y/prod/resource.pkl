@@ -6,19 +6,3 @@ kubernetes = new ResourceConfig.Kubernetes {
     "y2"
   }
 }
-
-buckets = new Listing<ResourceConfig.Bucket> {
-  new {
-    name = "y-prod"
-    region = "us-west-2"
-    selector {
-      new {
-        key = "cloudProvider"
-        operator = "In"
-        values {
-          "aws"
-        }
-      }
-    }
-  }
-}
