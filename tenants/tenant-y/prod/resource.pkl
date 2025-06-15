@@ -1,25 +1,8 @@
 import ".../schema/tenant/ResourceConfig.pkl"
-import ".../schema/tenant/SelectorConfig.pkl"
 
 kubernetes = new ResourceConfig.Kubernetes {
   namespaces = new {
     "y1"
     "y2"
-  }
-}
-
-buckets = new Listing<ResourceConfig.Bucket> {
-  new {
-    name = "y"
-    region = "us-west-2"
-    selector {
-      new {
-        key = "cloudProvider"
-        operator = "In"
-        values {
-          "aws"
-        }
-      }
-    }
   }
 }
