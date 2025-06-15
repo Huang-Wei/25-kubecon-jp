@@ -1,5 +1,4 @@
 import ".../schema/tenant/ResourceConfig.pkl"
-import ".../schema/tenant/SelectorConfig.pkl"
 
 kubernetes = new ResourceConfig.Kubernetes {
   namespaces = new {
