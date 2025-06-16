@@ -5,3 +5,10 @@ kubernetes = new ResourceConfig.Kubernetes {
     "x"
   }
 }
+
+buckets = new Listing<ResourceConfig.Bucket> {
+  new {
+    name = "x-prod"
+    region = "us-east-1"
+  }
+}
